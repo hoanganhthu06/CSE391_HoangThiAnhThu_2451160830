@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <title>Trang Multimedia</title>
+    </head>
+    <body>
+        <h1>Giới thiệu sản phẩm</h1>
+        <!-- Ảnh -->
+        <figure>
+            <img src="img1.jpg" alt="iPhone 16 Pro Max màu đen"
+                loading="lazy"
+                style="max-width:100%; height:auto;">
+            <figcaption>iPhone 16 Pro Max</figcaption>
+        </figure>
+
+        <figure>
+            <img src="img2.jpg" alt="iPhone 16 màu trắng"
+                loading="lazy"
+                style="max-width:100%; height:auto;">
+            <figcaption>iPhone 16</figcaption>
+        </figure>
+
+        <figure>
+            <img src="img3.jpg" alt="iPhone 16 màu xanh"
+                loading="lazy"
+                style="max-width:100%; height:auto;">
+        <figcaption>iPhone 16 màu xanh</figcaption>
+        </figure>
+
+        <!-- YouTube -->
+        <h2>Video giới thiệu</h2>        
+        <iframe width="560" height="315" 
+                src="https://www.youtube.com/embed/Ys7-6_t7OEQ?si=b9q6iy-Chy2Hwwsx" 
+                title="YouTube video player"
+                style="border: none;"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+        </iframe>
+
+        <!-- Video -->
+        <h2>Video demo</h2>
+        <video controls poster="poster.jtif" width="500">
+            <source src="video.mp4" type="video/mp4">
+            <source src="video.webm" type="video/webm">
+        </video>
+
+        <!-- Audio -->
+        <h2>Nhạc nền</h2>
+        <audio controls>
+            <source src="audio.mp3" type="audio/mpeg">
+        </audio>
+
+        <!-- SVG -->
+        <h2>Logo</h2>
+        <svg width="100" height="100">
+            <circle cx="50" cy="50" r="40" fill="pink" />
+        </svg>
+
+    </body>
+</html>

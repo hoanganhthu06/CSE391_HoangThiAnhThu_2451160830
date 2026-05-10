@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Validation</title>
+</head>
+<body>
+<h2>Kiểm tra validation</h2>
+<form>
+    <!-- Trường hợp 1 -->
+    <p>1. Required:</p>
+    <input type="text" required value="">
+    <!-- Trường hợp 2 -->
+    <p>2. Email:</p>
+    <input type="email" value="abc">  
+    <!-- Trường hợp 3 -->
+    <p>3. Number (1-10):</p>
+    <input type="number" min="1" max="10" value="15">   
+    <!-- Trường hợp 4 -->
+    <p>4. Pattern (10 số):</p>
+    <input type="text" pattern="[0-9]{10}" value="abc123">   
+    <!-- Trường hợp 5 -->
+    <p>5. Password (min 8):</p>
+    <input type="password" minlength="8" value="123">
+
+    <br><br>
+    <button type="submit">Gửi</button>
+</form>
+</body>
+</html>

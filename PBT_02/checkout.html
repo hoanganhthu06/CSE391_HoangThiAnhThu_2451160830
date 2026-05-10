@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <title>Checkout</title>
+        <style>
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            th, td {
+                border: 1px solid black;
+                padding: 8px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+    <h2>Giỏ hàng</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Sản phẩm</th>
+                <th>Đơn giá</th>
+                <th>Số lượng</th>
+                <th>Thành tiền</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>iPhone 16</td>
+                <td>20.000.000</td>
+                <td>1</td>
+                <td>20.000.000</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Tai nghe</td>
+                <td>500.000</td>
+                <td>2</td>
+                <td>1.000.000</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Sạc dự phòng</td>
+                <td>300.000</td>
+                <td>1</td>
+                <td>300.000</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="4">Tổng cộng</td>
+                <td>21.300.000</td>
+            </tr>
+        </tfoot>
+    </table>
+    <hr>
+    <form action="#" method="POST">
+    <h2>Thanh toán</h2> 
+
+    <!-- Radio -->
+     <label>
+        <input type="radio" name="payment" required> COD
+    </label>
+    <label>
+        <input type="radio" name="payment"> Chuyển khoản
+    </label>
+    <label>
+        <input type="radio" name="payment"> Ví điện tử
+    </label>
+
+    <br><br>
+
+    <!-- Mã giảm giá -->
+    <label for="coupon">Mã giảm giá:</label>
+    <input type="text" id="coupon" name="coupon"
+           placeholder="SALE2026"
+           pattern="SALE[0-9]{4}">
+
+    <br><br>
+
+    <!-- Ghi chú -->
+    <label for="note">Ghi chú:</label><br>
+    <textarea id="note" rows="3" placeholder="Nhập ghi chú..."></textarea>
+
+    <hr>
+
+    <h2>Thông tin giao hàng</h2>
+
+    <!-- Ngày -->
+    <label for="date">Ngày giao:</label>
+    <input type="date" id="date" name="date" required>
+
+    <br><br>
+
+    <!-- Khung giờ -->
+    <label for="time">Khung giờ:</label>
+    <select id="time">
+        <option>Sáng (8-12h)</option>
+        <option>Chiều (14-18h)</option>
+        <option>Tối (18-21h)</option>
+    </select>
+
+    <br><br>
+
+    <!-- Range -->
+    <label for="day">Thời gian giao (ngày):</label>
+    <input type="range" id="day" min="1" max="7" step="1">
+
+    <br><br>
+
+    <!-- Nút gửi -->
+    <button type="submit" aria-label="Xác nhận đặt hàng">
+        Đặt hàng
+    </button>
+
+    <button type="reset">Nhập lại</button>
+
+    </form>
+
+    <hr>
+
+    <h2>Tìm sản phẩm (Nâng cao)</h2>
+
+    <input list="products" placeholder="Tìm sản phẩm...">
+    <datalist id="products">
+        <option value="iPhone 16">
+        <option value="Laptop Dell">
+        <option value="Tai nghe">
+    </datalist>
+
+    <h2>Tổng tiền (output)</h2>
+    <output>21.300.000 VND</output>
+
+    <h2>Tiến trình mua hàng</h2>
+    <progress value="70" max="100"></progress>
+
+    </body>
+</html>

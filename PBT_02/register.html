@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <title>Đăng ký</title>
+    </head>
+    <body>
+        <form action="#" method="POST">
+
+            <fieldset>
+                <legend>Thông tin cá nhân</legend>
+
+                <label for="name">Họ tên:</label>
+                <input type="text" id="name" name="name" placeholder="Nhập họ tên" required> <br>
+
+                <label for="phone">Số điện thoại:</label>
+                <input type="tel" id="phone" name="phone" 
+                placeholder="Nhập số điện thoại" pattern="[0-9]{10}" required><br>
+
+                <label for="dob">Ngày sinh:</label>
+                <input type="date" id="dob" name="dob" max="2026-01-01" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Tài khoản</legend>
+
+                <label for="username">Tên đăng nhập:</label>
+                <input type="text" id="username" name="username" 
+                placeholder="3-20 ký tự" 
+                pattern="[a-zA-Z0-9_]{3,20}" required><br>
+
+                <label for="password">Mật khẩu:</label>
+                <input type="password" id="password" name="password" 
+                placeholder="Ít nhất 8 ký tự" minlength="8" 
+                pattern="(?=.*[A-Z])(?=.*[0-9]).{8,}" required><br>
+
+                <label for="confirm">Xác nhận mật khẩu:</label>
+                <input type="password" id="confirm" name="confirm"
+                placeholder="Nhập lại mật khẩu"
+                minlength="8" required>
+            </fieldset>
+
+             <fieldset>
+                <legend>Thông tin giao hàng</legend>
+
+                <label for="city">Thành phố:</label>
+                <select id="city" name="city" required>
+                    <option value="">--Chọn--</option>
+                    <option>Hà Nội</option>
+                    <option>TP.HCM</option>
+                    <option>Đà Nẵng</option>
+                    <option>Hải Phòng</option>
+                    <option>Cần Thơ</option>
+                </select><br>
+
+                <label for="district">Quận/Huyện:</label>
+                <select id="district" name="district">
+                    <option>Quận 1</option>
+                    <option>Quận 2</option>
+                </select><br>
+
+                <label for="address">Địa chỉ chi tiết:</label>
+                <textarea id="address" name="address" placeholder="Nhập địa chỉ" rows="3"></textarea><br>
+
+                Giới tính:
+                <input type="radio" id="male" name="gender">
+                <label for="male">Nam</label>
+
+                <input type="radio" id="female" name="gender">
+                <label for="female">Nữ</label>
+
+                <input type="radio" id="other" name="gender">
+                <label for="other">Khác</label><br>
+
+                <input type="checkbox" id="agree" required>
+                <label for="agree">Tôi đồng ý điều khoản</label>
+            </fieldset>
+
+            <button type="submit">Gửi</button>
+            <button type="reset">Đặt lại</button>
+            
+        </form>
+    </body>
+</html>
