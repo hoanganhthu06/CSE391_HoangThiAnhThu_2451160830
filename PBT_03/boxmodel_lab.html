@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="boxmodel.css">
+</head>
+<body>
+    <!--Phần 1-->
+    <h2>So sánh Content-box và Border-box</h2>
+    <div class="wrapper">
+        <div class="box content-box">Content Box</div>
+        <div class="box border-box">Border Box</div>
+    </div>
+    <!-- PHẦN 2: Sai -->
+     <h2>Layout 3 cột (Sai - content-box)</h2>
+     <div class="container">
+        <div class="left">Sidebar</div>
+        <div class="middle">Content</div>
+        <div class="right">Ads</div>
+     </div>
+     <!--Phần 2: Đúng-->
+     <h2>Layout 3 cột (Đúng - border-box)</h2>
+     <div class="container fixed">
+        <div class="left">Sidebar</div>
+        <div class="middle">Content</div>
+        <div class="right">Ads</div>
+     </div>
+</body>
+</html>

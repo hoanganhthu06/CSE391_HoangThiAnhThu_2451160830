@@ -1,0 +1,10 @@
+p {color: red;}
+p.text {color: blue;}
+.text {color: green;}
+.highlight {color: purple;}
+.text.highlight {color: orange;}
+p.text.highlight {color: brown;}
+#demo {color: pink;}
+#demo.text {color: cyan;}
+#demo.text.highlight {color: black;}
+p#demo.text.highlight {color: gold;}

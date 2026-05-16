@@ -147,3 +147,78 @@
         border: 1px solid #ccc;
     }
 -> Tổng vẫn bằng 960px 
+
+### Câu C2 (10đ) — Câu đố xếp tầng
+1. "Sản phẩm A" (h2) có font-size = 20px và color = green
+- Giải thích: 
++ .card .title { font-size: 20px; } -> áp dụng trực tiếp -> thắng kế thừa từ .container (14px)
++ Về màu: 
+    .card { color: blue; }
+    #featured .title { color: red; } (mạnh hơn)
+    .highlight { color: green !important; } (có !important nên thắng tất cả)
+-> kết quả: green
+2. "Mô tả sản phẩm" (p trong thẻ đặc trưng) có color = blue
+- Giải thích:
+    .card p { color: inherit; } (kế thừa từ cha .card)
+    .card { color: blue; }
+-> vậy p phải nhận màu blue
+3. "Sản phẩm " (h2) có font-size = 20px và color = blue
+- Giải thích: 
++ font-size: .card .title { font-size: 20px; } (áp dụng trực tiếp)
++ color: .card { color: blue; } (không có id hay !important -> dùng màu của .card)
+-> kết quả: blue
+4. "Mô tả sản phẩm B" (p.highlight) có color = green
+- Giải thích:
+    .highlight { color: green !important; }
+(có !important nên ghi đè):
+    .card p { color: inherit; }
+    .card { color: blue; }
+-> vậy kết quả: green
+
+## PHẦN B — THỰC HÀNH CODE
+### Bài B1 (20đ) — Style trang Profile
+- Các bộ chọn đã sử dụng: 
+1. Element selector: body, header, table, footer
+2. Class selector: .active
+3. ID selector: #about, #skills, #contact
+4. Descendant selector: nav a, th, td
+5. Pseudo-class: a, tr, tr(even)
+6. Universal selector: *
+
+### Bài B2 (20đ) — Box Model Lab
+* Phần 1:
+- Hộp 1 (content-box): chiều rộng thực tế = 350px (đo từ DevTools)
+- Hộp 2 (border-box): chiều rộng thực tế = 300px(đo từ DevTools)
+- Giải thích sự khác biệt: 
++ content-box: width chỉ tính nội dung, nên cộng thêm padding và border
++ border-box: width đã bao gồm paddding và boder nên không tăng kích thước
+
+* Phần 2:
+- Trường hợp không dùng border-box: chiều rộng thực tế:
++ Sidebar: 250+30=280px
++ Content: 500+40=540px
++ Ads: 250+30=280px
+-> tổng=1100px > 1000px. Do đó, layout bị vỡ, các cột không nằm cùng hàng
+- Trường hợp dùng border-box:
++ box-sizing: border-box giúp padding không làm tăng kíhc thước phần tử
+-> tổng=1000px
+
+### Bài B3 (15đ) — Cuộc chiến tính đặc thù
+1. 10 quy tắc + điểm đặc hiệu:
+    1. p -> (0,0,0,1)
+    2. .text -> (0,0,1,0)
+    3. .highlight -> (0,0,1,0)
+    4. p.text -> (0,0,1,1)
+    5. .text.highlight -> (0,0,2,0)
+    6. p.text.highlight -> (0,0,2,1)
+    7. #demo -> (0,1,0,0)
+    8. #demo.text -> (0,1,1,0)
+    9. #demo.text.highlight -> (0,1,2,0)
+    10. p#demo.text.highlight ->(0,1,2,1)
+2. Phần tử cuối cùng hiển thị màu: gold. Tại vì: rule có specificity cao nhất (0,1,2,1) nên ghi đè tất cả các rule khác
+3. ảnh chụp màn hình
+4. Thay đổi quy tắc thứ tự trong tệp CSS. Kết quả:
+- Nếu specificity khác nhau -> không bị ảnh hưởng
+- Nếu specificity bằng nhau -> rule viết sau sẽ thắng
+
+## PHẦN D — VIDEO THỰC HÀNH OBS

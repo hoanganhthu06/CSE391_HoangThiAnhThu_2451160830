@@ -1,0 +1,54 @@
+/* Phần 1 */
+.wrapper {
+    display: flex;
+    gap: 20px;
+}
+
+.box {
+    width: 300px;
+    padding: 20px;
+    border: 5px solid black;
+    background-color: lightblue;
+}
+
+.content-box {
+    box-sizing: content-box;
+}
+
+.border-box {
+    box-sizing: border-box;
+    background-color: lightgreen;
+}
+
+/* Phần 2 */
+.container {
+    width: 1000px;
+    display: flex;
+    margin-top: 20px;
+}
+
+.container div {
+    flex-shrink: 0;
+}
+
+.left {
+    width: 250px;
+    padding: 15px;
+    background: #ddd;
+}
+
+.middle {
+    width: 500px;
+    padding: 20px;
+    background: #bbb;
+}
+
+.right {
+    width: 250px;
+    padding: 15px;
+    background: #ddd;
+}
+
+.fixed div {
+    box-sizing: border-box;
+}
