@@ -45,7 +45,7 @@
     padding-top: 5rem;
     padding-bottom: 5rem;
 }
-
+.py-section { padding: 5rem 0; }
 .gap-4 {
     gap: 2rem;
 }
