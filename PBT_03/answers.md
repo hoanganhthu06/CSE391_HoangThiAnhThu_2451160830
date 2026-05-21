@@ -222,3 +222,4 @@
 - Nếu specificity bằng nhau -> rule viết sau sẽ thắng
 
 ## PHẦN D — VIDEO THỰC HÀNH OBS
+- Link video: https://drive.google.com/file/d/1WmWQBfG0SIzBwW93d6la5lrNY2_oRHWL/view?usp=drive_link
