@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-primary;
+    font-size: 14px;
+    background-color: $bg-color;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.header {
+    @include flex-center;
+    justify-content: space-between;
+    background: $primary-color;
+    color: $text-color;
+    padding: $spacing-md;
+
+    .logo {
+        font-weight: bold;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .hamburger {
+        font-size: 24px;
+        cursor: pointer;
+    }
+}
+
+.sidebar {
+    display: none;
+    padding: $spacing-sm;
+    background: f5f5f5;
+}
+
+.ads {
+    display: none;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-md;
+    padding: $spacing-md;
+}
+
+.card {
+    background: $secondary-color;
+    padding: $spacing-sm;
+    text-align: center;
+    border-radius: 6px;
+    transition: 0.3s;
+
+    .card-image {
+        margin-bottom: $spacing-sm;
+    }
+
+    .card-title {
+        font-weight: bold;
+    }
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    &.featured {
+        border: 2px solid red;
+    }
+
+    @include card-shadow;
+}
+
+.footer {
+    background: $primary-color;
+    color: $text-color;
+    text-align: center;
+    padding: $spacing-md;
+}

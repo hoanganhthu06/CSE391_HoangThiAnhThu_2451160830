@@ -52,3 +52,24 @@
 + Dễ mở rộng và bảo trì
 
 ### Câu C2 (10đ) — So sánh
+* CSS từ PBT_05: "responsive.css"
+* So sánh với phiên bản Bootstrap:
+1. 
+- Số dòng CSS cần viết: 129 dòng và phải tự viết layout, grid, hover, responsive
+- Bootstrap: gần như là 0 - 10 dòng CSS. Chủ yếu dung class có sẵn. Ví dụ: 
+<div class="container">
+<div class="row">
+<div class="col-md-6 col-lg-3">
+
+2. Thời gian phát triển
+- CSS thuần: lâu hơn, phải tự code từ đầu (flex, grid, media query)
+- Bootstrap: nhanh hơn rất nhiều, chỉ cần ghép class
+-> Do đó, bootstrap giúp làm bài nhanh hơn, tiết kiệm thời gian
+3. Năng lượng tùy biến
+- CSS thuần: tùy biến 100%. Muốn màu gì, layout gì cũng được
+- Bootstrap: bị giới hạn theo framework. Muốn custom sâu -> phải override CSS
+-> Kết luận: CSS thuần: linh hoạt hơn. Bootstrap: dễ nhưnh bị gò bó
+4. - Nên dùng Bootstrap khi nào: làm project nhanh hơn, làm web đơn giản (blog, admin, form), không cần design quá đặc biệt, làm prototype/demo
+- Không nên dùng bootstrap khi: cần thiết kế độc đáo khác biệt. Web cần performance cao. Muốn toàn quyền kiểm soát UI, làm UI/UX chuyên nghiệp
+
+## Phần D: 

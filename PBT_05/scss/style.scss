@@ -1,0 +1,54 @@
+@import "_variables";
+@import "_mixins";
+@import "_components";
+
+@include respond-to(tablet) {
+    body {
+        font-size: 16px;
+    }
+
+    .header {
+        .nav {
+            display: flex;
+            gap: 20px;
+
+            a {
+                color: $text-color;
+                text-decoration: none;
+            }
+        }
+
+        .hamburger {
+            display: none;
+        }
+    }
+
+    .sidebar {
+        display: block;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@include respond-to(desktop) {
+    body {
+        font-size: 18px;
+        display: grid;
+        grid-template-columns: 200px 1fr 200px;
+        grid-template-areas: 
+            "header header header"
+            "sidebar products ads"
+            "footer footer footer";
+    }
+
+    .header {grid-area: header;}
+    .sidebar {grid-area: sidebar; display: block;}
+    .products {grid-area: ads; display: block;}
+    .footer {grid-area: footer;}
+
+    .products {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

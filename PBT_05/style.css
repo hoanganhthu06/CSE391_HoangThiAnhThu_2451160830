@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  background-color: beige;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  background: #333;
+  color: white;
+  padding: 16px;
+}
+.header .logo {
+  font-weight: bold;
+}
+.header .nav {
+  display: none;
+}
+.header .hamburger {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.sidebar {
+  display: none;
+  padding: 8px;
+  background: f5f5f5;
+}
+
+.ads {
+  display: none;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  padding: 16px;
+}
+
+.card {
+  background: #e3f2fd;
+  padding: 8px;
+  text-align: center;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+.card .card-image {
+  margin-bottom: 8px;
+}
+.card .card-title {
+  font-weight: bold;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+.card.featured {
+  border: 2px solid red;
+}
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 16px;
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+  .header .nav {
+    display: flex;
+    gap: 20px;
+  }
+  .header .nav a {
+    color: white;
+    text-decoration: none;
+  }
+  .header .hamburger {
+    display: none;
+  }
+  .sidebar {
+    display: block;
+  }
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  body {
+    font-size: 18px;
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-areas: "header header header" "sidebar products ads" "footer footer footer";
+  }
+  .header {
+    grid-area: header;
+  }
+  .sidebar {
+    grid-area: sidebar;
+    display: block;
+  }
+  .products {
+    grid-area: ads;
+    display: block;
+  }
+  .footer {
+    grid-area: footer;
+  }
+  .products {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+

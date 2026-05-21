@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind Components</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6 space-y-10">
+    <section>
+        <h2 class="text-2xl font-bold mb-4">Buttons</h2>
+
+        <div class="flex flex-wrap gap-4 items-center">
+
+            <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">
+                Primary
+            </button>
+
+            <button class="bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded">
+                Secondary
+            </button>
+
+            <button class="border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white px-4 py-2 rounded">
+                Outline
+            </button>
+
+            <button class="bg-gray-300 text-gray-500 px-4 py-2 rounded cursor-not-allowed" disabled>
+                Disabled
+            </button>
+
+            <button class="bg-blue-500 text-white px-4 py-2 rounded flex items-center gap-2">
+                <span class="animate-spin border-2 border-white border-t-transparent rounded-full w-4 h-4"></span>
+                Loading
+            </button>
+
+            <button class="bg-green-500 text-white px-2 py-1 text-sm rounded">Small</button>
+            <button class="bg-green-500 text-white px-4 py-2 rounded">Medium</button>
+            <button class="bg-green-500 text-white px-6 py-3 text-lg rounded">Large</button>
+
+        </div>
+    </section>
+
+    <section>
+        <h2 class="text-2xl font-bold mb-4">Cards</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <div class="bg-white p-4 rounded shadow hover:shadow-lg">
+                <img src="https://i.pinimg.com/1200x/26/d4/99/26d499d40a0ef3ebb3790f3b840d858f.jpg" class="rounded mb-3">
+                <h3 class="font-bold">Sản phẩm A</h3>
+                <p class="text-gray-500">500.000đ</p>
+            </div>
+
+            <div class="bg-white p-4 rounded shadow hover:shadow-lg">
+                <h3 class="font-bold">Hoàng Anh Thư</h3>
+                <p>Email: anhthu221106@gmail.com</p>
+            </div>
+
+            <div class="bg-white p-4 rounded shadow hover:shadow-lg text-center">
+                <h3 class="text-xl font-bold">Gói Pro</h3>
+                <p class="text-2xl text-blue-500 my-2">199k</p>
+                <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">
+                    Mua ngay
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <h2 class="text-2xl font-bold mb-4">Form</h2>
+
+        <div class="bg-white p-6 rounded shadow space-y-4 max-w-md">
+
+            <div>
+                <label class="block mb-1">Họ tên</label>
+                <input type="text" class="w-full border p-2 rounded focus:ring-2 focus:ring-blue-400">
+            </div>
+
+            <div>
+                <label class="block mb-1">Giới tính</label>
+                <select class="w-full border p-2 rounded focus:ring-2 focus:ring-blue-400">
+                    <option>Nam</option>
+                    <option>Nữ</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="block mb-1">Ghi chú</label>
+                <textarea class="w-full border p-2 rounded focus:ring-2 focus:ring-blue-400"></textarea>
+            </div>
+
+            <div class="flex gap-3">
+                <label><input type="checkbox" class="mr-1"> HTML</label>
+                <label><input type="checkbox" class="mr-1"> CSS</label>
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <h2 class="text-2xl font-bold mb-4">Alerts</h2>
+
+        <div class="space-y-3 max-w-md">
+
+            <div class="bg-green-100 text-green-700 p-3 rounded flex justify-between">
+                Thành công!
+                <button>x</button>
+            </div>
+
+            <div class="bg-red-100 text-red-700 p-3 rounded flex justify-between">
+                Lỗi!
+                <button>x</button>
+            </div>
+
+            <div class="bg-yellow-100 text-yellow-700 p-3 rounded flex justify-between">
+                Cảnh báo!
+                <button>x</button>
+            </div>
+
+            <div class="bg-blue-100 text-blue-700 p-3 rounded flex justify-between">
+                Thông tin!
+                <button>x</button>
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <h2 class="text-2xl font-bold mb-4">Navigation</h2>
+
+        <div class="bg-white p-4 shadow flex justify-between">
+            <div class="font-bold">LOGO</div>
+                <div class="hidden md:flex gap-4">
+                    <a class="hover:text-blue-500">Home</a>
+                    <a class="hover:text-blue-500">About</a>
+                    <a class="hover:text-blue-500">Contact</a>
+                </div>
+            </div>
+
+            <div class="flex mt-4">
+
+                <div class="w-48 bg-white p-4 shadow hidden md:block">
+                    <ul class="space-y-2">
+                        <li class="hover:text-blue-500 cursor-pointer">Dashboard</li>
+                        <li class="hover:text-blue-500 cursor-pointer">Users</li>
+                    </ul>
+                </div>
+
+                <div class="flex-1 p-4">Nội dung chính</div>
+
+            </div>
+
+    </section>
+
+</body>
+</html>

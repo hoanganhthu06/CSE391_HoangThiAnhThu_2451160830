@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind Landing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white dark:bg-gray-900 text-black dark:text-white">
+    <header class="flex justify-between items-center p-4 shadow-md dark:bg-gray-800">
+        <h1 class="text-xl font-bold">Shop Tia</h1>
+
+        <nav class="hidden md:flex gap-6">
+            <a href="#" class="hover:text-blue-500">Trang chủ</a>
+            <a href="#" class="hover:text-blue-500">Sản phẩm</a>
+            <a href="#" class="hover:text-blue-500">Liên hệ</a>
+        </nav>
+
+        <button class="md:hidden">☰</button>
+    </header>
+
+    <section class="h-[400px] bg-cover bg-center flex items-center justify-center text-center"
+        style="background-image: url('https://i.pinimg.com/736x/4b/74/14/4b741468d4bcf95a180931d2c528b727.jpg');">
+
+        <div>
+            <h2 class="text-3xl md:text-5xl font-bold mb-4">Siêu sale 50%</h2>
+            <p class="mb-4">Mua ngay hôm nay</p>
+            <button class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg">
+                Mua ngay
+            </button>
+        </div>
+    </section>
+
+    <section class="p-6">
+        <h2 class="text-2xl font-bold mb-6 text-center">Sản phẩm</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+            <div class="rounded-lg shadow-md hover:shadow-xl transition-shadow p-4 dark:bg-gray-800">
+                <img src="https://i.pinimg.com/736x/61/34/02/613402f06d5b572e8a375001310f9095.jpg" class="w-full rounded">
+                <h3 class="mt-2 font-bold">Sản phẩm 1</h3>
+                <p>200k</p>
+            </div>
+
+            <div class="rounded-lg shadow-md hover:shadow-xl transition-shadow p-4 dark:bg-gray-800">
+                <img src="https://i.pinimg.com/736x/ba/71/e5/ba71e5a766534e223a1876f4ee0dbcb8.jpg" class="w-full rounded">
+                <h3 class="mt-2 font-bold">Sản phẩm 2</h3>
+                <p>600k</p>
+            </div>
+
+            <div class="rounded-lg shadow-md hover:shadow-xl transition-shadow p-4 dark:bg-gray-800">
+                <img src="https://i.pinimg.com/736x/f5/86/34/f58634cb2cbe835627e292b7c773f5e0.jpg" class="w-full rounded">
+                <h3 class="mt-2 font-bold">Sản phẩm 3</h3>
+                <p>850k</p>
+            </div>
+
+            <div class="rounded-lg shadow-md hover:shadow-xl transition-shadow p-4 dark:bg-gray-800">
+                <img src="https://i.pinimg.com/736x/c7/0e/1f/c70e1ff2d6e81e9ddd2be458dc15ab4f.jpg" class="w-full rounded">
+                <h3 class="mt-2 font-bold">Sản phẩm 4</h3>
+                <p>980k</p>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="bg-gray-200 dark:bg-gray-800 p-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-center md:text-left">
+
+            <div>
+                <h4 class="font-bold">Shop</h4>
+                <p>Uy tín chất lượng</p>
+            </div>
+
+            <div>
+                <h4 class="font-bold">Liên hệ</h4>
+                <p>Email: anhthu221106@gmail.com</p>
+            </div>
+
+            <div>
+                <h4 class="font-bold">Hỗ trợ</h4>
+                <p>Chính sách</p>
+            </div>
+
+            <div>
+                <h4 class="font-bold">Mạng xã hội</h4>
+                <p>Facebook</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

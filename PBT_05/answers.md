@@ -147,6 +147,11 @@ SCSS là ngôn ngữ mở rộng của CSS (có biến, mixin, nesting...). Vì 
 + Live Sass Compiler (VS Code)
 + Ví dụ: sass style.scss style.css -> sau khi biên dịch, trình duyệt sẽ đọc file .css
 
+## PHẦN B — THỰC HÀNH CODE
+### Bài B3 (20đ) — SCSS Refactor
+- Lấy file CSS từ bài B1: responsive.css
+- Compile - Biên dịch SCSS -> CSS: sử dụng lệnh biên dịch: sass scss/style.scss style.css
+
 ## PHẦN C — PHÂN TÍCH
 ### Câu C1 (10đ) — Phân tích trang web thực tế
 * Phân tích:
@@ -173,4 +178,112 @@ SCSS là ngôn ngữ mở rộng của CSS (có biến, mixin, nesting...). Vì 
 - Mobile: chữ lớn hơn, dễ đọc hơn
 - Tablet: cỡ chữ trung bình
 - Desktop: chữ nhỏ hơn để tiết kiệm không gian
+5. @media quy tắc: ![alt text](<ảnh C1- @media.jpg>)
 
+### Câu C2 (10đ) — Thiết kế Chiến lược đáp ứng
+* Mobile (<768px)
+- Wireframe:
+┌───────────────┐
+│   HEADER      │
+├───────────────┤
+│   HERO IMAGE  │
+├───────────────┤
+│   FOOD 1      │
+│   FOOD 2      │
+│   FOOD 3      |
+|   FOOD 4      |
+|   FOOD 5      |
+|   FOOD 6      |
+├───────────────┤
+│   FORM        │
+├───────────────┤
+│   MAP         │
+├───────────────┤
+│   FOOTER      │
+└───────────────┘
+- Phân tích:
++ Layout: 1 cột
++ Form: nằm dưới danh sách món ăn
++ Ẩn: không cần ẩn nhiều, chỉ đơn giản layout
++ Ưu tiên cuộc dọc (scroll)
+
+* Tablet (768px - 1023px)
+- Wireframe:
+┌───────────────────────┐
+│        HEADER         │
+├───────────────────────┤
+│      HERO IMAGE       │
+├───────────┬───────────┤
+│ FOOD 1    │ FOOD 2    │
+│ FOOD 3    │ FOOD 4    │
+│ FOOD 5    │ FOOD 6    │
+├───────────┴───────────┤
+│        FORM           │
+├───────────────────────┤
+│         MAP           │
+├───────────────────────┤
+│        FOOTER         │
+└───────────────────────┘
+- Phân tích:
++ Grid: 2 cột
++ Form: vẫn ở dưới
++ Map: full width dưới cùng
++ Hiển thị thoáng hơn mobile
+
+* Desktop (>=1024px)
+- Wireframe:
+┌──────────────────────────────┐
+│            HEADER            │
+├──────────────────────────────┤
+│         HERO IMAGE           │
+├──────────────┬───────────────┤
+│  FOOD GRID   │     FORM      │
+│  (3 cột)     │               │
+│              │               │
+├──────────────┴───────────────┤
+│            MAP               │
+├──────────────────────────────┤
+│           FOOTER             │
+└──────────────────────────────┘
+- Phân tích:
++ Layout: 2 cột, cột trái: danh sách món; cột phải: form đặt bàn
++ Grid: 3 cột
++ Không cần tạo sidebar riêng
++ Tận dụng chiều ngang màn hình
+
+* Khung CSS:
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .food-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .main {
+        display: block;
+    }
+
+    @media (min-width: 768px) {
+        .food-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .main {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+        }
+
+        .food-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+## Phần D: 

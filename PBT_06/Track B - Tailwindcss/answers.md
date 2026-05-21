@@ -54,6 +54,24 @@
 
 ## PHẦN C — PHÂN TÍCH
 ### Câu C1 (10đ) — Tailwind vs CSS thuần
+* CSS lấy ở PBT_05: "responsive.css"
+1. Kích thước tệp HTML:
+- CSS thuần: HTML gọn nhẹ, style nằm ở file .css. Ví dụ:
+<div class=card>
+- Tailwind dài hơn vì dùng nhiều class. Ví dụ:
+<div class="bg-blue-100 p-3 text-center rounded transition hover:scale-105">
+
+2. Khả năng bảo trì
+- CSS thuần: phải tìm CSS ở file khác, dễ bị quên class, khi sửa phải sửa nhiều nơi
+- Tailwind: nhìn HTML là biết style, sửa trực tiếp trên class, không cần nhảy file
+3. Khả năng sử dụng lại
+- CSS thuần: Dùng lại bằng class: <div class="card">, rất tiện reuse
+- Tailwind có 2 cách:
++ Cách 1: copy class: <div class="bg-blue-100 p-3 text-center rounded ..."> , nhược điểm: dài, lặp lại
++ Cách 2: dùng @apply (pro hơn)
+    .card {
+        @apply bg-blue-100 p-3 text-center rounded transition hover:scale-105;
+    }
 
 ### Câu C2 (10đ) — Performance
 1. File HTML dùng Tailwind thường rất dài (nhiều classes). Tailwind CSS file cuối cùng lại NHỎ HƠN Bootstrap CSS tại vì: 
