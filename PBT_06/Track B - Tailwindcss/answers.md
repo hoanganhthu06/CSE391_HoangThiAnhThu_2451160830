@@ -83,3 +83,7 @@
 - JIT - cách mới: không tạo sẵn toàn bộ CSS nữa. Khi bạn viết class trong HTML: Tailwind generate CSS ngay lúc đó -> không cần “xóa” nhiều như PurgeCSS vì: hỉ tạo đúng cái cần dùng
 - Nó loại bỏ: Loại bỏ các utility classes KHÔNG được sử dụng
 3. Khi nào KHÔNG nên dùng TailwindCSS? Cho 2 tình huống cụ thể.
+- Trường hợp 1: Project nhỏ, đơn giản. Ví dụ: trang HTML đơn giản, Landing page đơn giản. Dùng Tailwind HTML rất dài , không cần thiết. Nên dùng CSS thuần
+- Trường hợp 2: Team không quen Tailwind. Vấn đề là class dài, khó đọc với người mới. Code HTML bị rối -> Khó maintain trong team lớn.
+
+## Phần D: 
