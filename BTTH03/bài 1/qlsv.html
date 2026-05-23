@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý sinh viên</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Quản Lý Sinh Viên</h1>
+    
+    <div class="container">
+        <button class="btn btn-add" id="addBtn">Thêm sinh viên</button>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Mã sinh viên</th>
+                    <th>Họ tên</th>
+                    <th>Ngày sinh</th>
+                    <th>Lớp</th>
+                    <th>Điểm</th>
+                    <th>Email</th>
+                    <th>Hành động</th>
+                </tr>
+            </thead>
+
+            <tbody id="studentTableBody">
+
+            </tbody>
+        </table>
+
+        <div class="stats">
+            Tổng số: <span id="total">0</span> | ĐTB: <span id="avg">0</span>
+        </div>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+
+            <span class="close" id="closeBtn">&times;</span>
+            <h3 id="formTitle">Thêm sinh viên</h3>
+
+            <form id="studentForm" novalidate>
+                
+                <label for="id">Mã sinh viên</label>
+                <input type="text" id="id" name="id">
+                <small class="error" id="idError"></small>
+
+                <label for="name">Họ và tên</label>
+                <input type="text" id="name" name="name">
+                <small class="error" id="nameError"></small>
+
+                <label for="dob">Ngày sinh</label>
+                <input type="date" id="dob" name="dob">
+                <small class="error" id="dobError"></small>
+
+                <label for="class">Lớp</label>
+                <input type="text" id="class" name="class">
+                <small class="error" id="lopError"></small>
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+                <small class="error" id="emailError"></small>
+                
+                <label for="score">Điểm trung bình</label>
+                <input type="number" id="score" name="score" step="0.1">
+                <small class="error" id="scoreError"></small>
+
+                <div class="form-actions">
+                    <button type="button" class="btn btn-cancel" id="cancelBtn">Hủy</button>
+                    <button type="submit" class="btn btn-save">Lưu</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lí công việc cá nhân</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Quản lí công việc cá nhân</h1>
+
+    <div  class="container">
+        <button class="btn btn-add">Thêm công việc mới</button>
+        
+        <div class="stats">
+            <div class="card blue">
+                <p>Tổng số công việc: </p>
+                <h3 id="tong">0</h3>
+            </div>
+
+            <div class="card green">
+                <p>Số công việc đã hoàn thành: </p>
+                <h3 id="daXong" style="color: green;">0</h3>
+            </div>
+
+            <div class="card orange">
+                <p>Số công việc chưa hoàn thành: </p>
+                <h3 id="chuaXong" style="color: red;">0</h3>
+            </div>
+        </div>
+
+        <div class="task-box">
+            <h3>Danh sách công việc</h3>
+            <div id="taskList" class="task-list"></div>
+        </div>
+
+        <div id="message" class="message"></div>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+
+            <span class="close" id="closeBtn">&times;</span>
+            <h3 id="formTitle">Thêm công việc</h3>
+            
+                <form id="taskForm">
+
+                    <label>Tiêu đề</label>
+                    <input type="text" id="title" required placeholder="Nhập tên công việc...">
+
+                    <label>Mô tả ngắn</label>
+                    <textarea id="desc" rows="3" placeholder="Ghi chú thêm..."></textarea>
+
+                    <label>Hạn hoàn thành</label>
+                    <input type="date" id="thoiHan" required>
+
+                    <label>Mức ưu tiên</label>
+                    <select id="priority">
+                        <option>Thấp</option>
+                        <option>Trung bình</option>
+                        <option>Cao</option>
+                    </select>
+
+                    <label>Trạng thái hoàn thành công việc</label>
+                    <div class="status-box">
+                        <label class="check-line">
+                            <input type="checkbox" id="status">
+                            <span>Đã hoàn thành</span>
+                        </label>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-save">Lưu</button>
+                        <button type="button" class="btn btn-cancel">Hủy</button>
+                    </div>
+                </form>
+        </div>
+    </div>
+
+    <script src="json.js"></script>
+</body>
+</html>

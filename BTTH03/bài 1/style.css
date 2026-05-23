@@ -1,0 +1,144 @@
+body {
+    background-color: beige;
+    font-family: Arial;
+    margin: 0;
+}
+
+/* HEADER */
+h1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 20px;
+    color: #2c3e50;
+}
+
+/* CONTAINER */
+.container {
+    width: 90%;
+    margin: 20px auto;
+    background: #fff5f3;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* STATISTICS */
+.stats {
+    display: flex;
+    gap: 20px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* BUTTON */
+.btn {
+    padding: 8px 14px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn-add {
+    background: #3498db;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.btn-edit {
+    background: gray;
+    color: white;
+}
+
+.btn-delete {
+    background: red;
+    color: white;
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: #3498db; /* màu xanh */
+    color: white;
+}
+
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    overflow-y: auto;
+}
+
+.modal-content {
+    background: #fff5f3;
+    width: 400px;
+    margin: 100px auto;
+    padding: 25px;
+    border-radius: 10px;
+    position: relative;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.modal h3 {
+    margin-top: 0;
+}
+
+.close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* FORM */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: 1px soliid #ccc;
+    box-sizing: border-box; 
+}
+
+/* ACTION BUTTONS */
+.form-actions {
+    text-align: right;
+}
+
+.btn-cancel {
+    background: red;
+    color: white;
+}
+
+.btn-save {
+    background: green;
+    color: white;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+}
+
+.error-border {
+    border: 1px solid red;
+}
