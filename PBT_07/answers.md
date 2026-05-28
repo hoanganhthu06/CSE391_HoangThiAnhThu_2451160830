@@ -163,6 +163,7 @@ var html = `<div class="card">
         }
 
 * Code hoàn chỉnh sau khi sửa:
+```js
 function tinhGiaGiamGia(giaBan, phanTramGiam) {
     giaBan = Number(giaBan);
     if (isNaN(giaBan) || giaBan < 0) {
@@ -196,9 +197,11 @@ for (let i = 0; i < 5; i++) {
         console.log("Item " + i);
     }, 1000);
 }
+```
 
 ### Câu C2 (10đ) — Bài toán thực tế
 - Code `restaurant_bill.js`:
+```js
 function tinhHoaDon(danhSachMon, isWednesday = false, tipEnabled = true) {
     let tong = 0;
 
@@ -261,6 +264,4 @@ const danhSach = [
 ];
 
 tinhHoaDon(danhSach, true, true);
-
-
-
+```
