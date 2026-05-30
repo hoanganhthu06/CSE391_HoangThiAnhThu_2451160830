@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #fce7f3, #e0f2fe);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    padding-top: 50px;
+}
+
+/* Card chính */
+.container {
+    background: white;
+    width: 400px;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Tiêu đề */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Input + button */
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+input:focus {
+    border-color: #f472b6;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    background: #f472b6;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ec4899;
+}
+
+/* Counter */
+#count {
+    margin: 10px 0;
+    color: #555;
+}
+
+/* Filter */
+.filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.filters button {
+    flex: 1;
+    margin: 0 3px;
+    background: #e5e7eb;
+    color: #333;
+}
+
+.filters button.active {
+    background: #60a5fa;
+    color: white;
+}
+
+/* Clear button */
+.clear-btn {
+    width: 100%;
+    background: #f87171;
+    margin-bottom: 15px;
+}
+
+.clear-btn:hover {
+    background: #ef4444;
+}
+
+/* Todo list */
+ul {
+    list-style: none;
+}
+
+li {
+    background: #f9fafb;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.2s;
+}
+
+li:hover {
+    transform: scale(1.02);
+}
+
+/* Text */
+.todo-text {
+    cursor: pointer;
+}
+
+/* Completed */
+.completed {
+    text-decoration: line-through;
+    color: #9ca3af;
+}
+
+/* Delete button */
+.delete {
+    color: red;
+    cursor: pointer;
+    font-weight: bold;
+}

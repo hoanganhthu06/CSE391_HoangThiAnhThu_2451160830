@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard_app</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <h1>Image Gallery</h1>
+
+        <div class="gallery">
+            <button id="prevBtn" aria-label="Ảnh trước">⬅</button>
+            <img id="mainImage" 
+                src="https://i.pinimg.com/1200x/54/4f/ef/544fef90e8ba28396fe1ce5336e45cd6.jpg" 
+                alt="Ảnh bộ sưu tập" 
+                tabindex="0">
+
+            <button id="nextBtn" aria-label="Ảnh tiếp theo">➡</button>
+        </div>
+    </div>
+
+    <!-- COMMAND PALETTE -->
+    <div id="overlay" class="overlay"></div>
+
+    <div id="commandPalette" role="dialog" aria-label="Command Palette">
+        <input type="text"
+            id="commandInput"
+            placeholder="Nhập lệnh..."
+            aria-label="Tìm lệnh">
+
+        <div id="commandList" role="listbox"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #fce7f3, #e0f2fe);
+    padding: 20px;
+}
+
+/* tiêu đề */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* input + controls */
+input, select, button {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+/* grid sản phẩm */
+#productList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* card sản phẩm */
+.card {
+    background: white;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* ảnh sản phẩm */
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* nút */
+.card button {
+    background: #f472b6;
+    color: white;
+    border: none;
+}
+
+.card button:hover {
+    background: #ec4899;
+}
+
+/* modal */
+#modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+/* dark mode */
+.dark {
+    background: #111;
+    color: white;
+}
